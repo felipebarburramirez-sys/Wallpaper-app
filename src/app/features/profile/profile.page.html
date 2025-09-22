@@ -2,7 +2,6 @@
 <app-header></app-header>
 
 <ion-content [fullscreen]="true" class="profile-page">
-  <!-- Completely redesigned profile page with minimalist layout -->
   <div class="profile-container">
 
     <!-- Profile Header -->
@@ -13,36 +12,36 @@
           <ion-icon name="camera"></ion-icon>
         </button>
       </div>
-      <h1 class="profile-title">Mi Perfil</h1>
-      <p class="profile-subtitle">Gestiona tu información personal</p>
+      <h1 class="profile-title">{{ 'profile.title' | translate }}</h1>
+      <p class="profile-subtitle">{{ 'profile.subtitle' | translate }}</p>
     </div>
 
     <!-- Profile Stats -->
     <div class="profile-stats">
       <div class="stat-item">
         <div class="stat-number">0</div>
-        <div class="stat-label">Fotos</div>
+        <div class="stat-label">{{ 'userInfo.totalPhotos' | translate }}</div>
       </div>
       <div class="stat-item">
         <div class="stat-number">0</div>
-        <div class="stat-label">Álbumes</div>
+        <div class="stat-label">{{ 'gallery.title' | translate }}</div>
       </div>
       <div class="stat-item">
         <div class="stat-number">0</div>
-        <div class="stat-label">Favoritas</div>
+        <div class="stat-label">{{ 'userInfo.favoritePhotos' | translate }}</div>
       </div>
     </div>
 
     <!-- Profile Information Card -->
     <div class="profile-card">
-      <h2 class="card-title">Información Personal</h2>
+      <h2 class="card-title">{{ 'userInfo.personalInfo' | translate }}</h2>
 
       <div class="form-section">
         <app-input
           id="name"
           type="text"
-          label="Nombre"
-          placeholder="Tu nombre"
+          [label]="'userForm.name' | translate"
+          [placeholder]="'userForm.name' | translate"
           [required]="true">
         </app-input>
       </div>
@@ -51,8 +50,8 @@
         <app-input
           id="surname"
           type="text"
-          label="Apellido"
-          placeholder="Tu apellido"
+          [label]="'userForm.surname' | translate"
+          [placeholder]="'userForm.surname' | translate"
           [required]="true">
         </app-input>
       </div>
@@ -61,25 +60,59 @@
         <app-input
           id="email"
           type="email"
-          label="Correo Electrónico"
+          [label]="'userForm.email' | translate"
           placeholder="tu@email.com"
           [required]="true">
         </app-input>
       </div>
 
       <div class="action-buttons">
-        <app-button class="button-large">Guardar Cambios</app-button>
-        <app-button class="button-large button-outline">Cancelar</app-button>
+        <app-button class="button-large">{{ 'profile.saveChanges' | translate }}</app-button>
+        <app-button class="button-large button-outline">{{ 'profile.cancel' | translate }}</app-button>
+      </div>
+    </div>
+
+    <!-- Agregando sección de preferencias de idioma -->
+    <div class="profile-card">
+      <h2 class="card-title">{{ 'profile.preferences' | translate }}</h2>
+
+      <div class="preference-section">
+        <div class="preference-header">
+          <ion-icon name="language-outline"></ion-icon>
+          <div class="preference-info">
+            <h3>{{ 'profile.language' | translate }}</h3>
+            <p>{{ 'userInfo.selectLanguage' | translate }}</p>
+          </div>
+        </div>
+
+        <div class="language-selector-container">
+          <app-language-selector></app-language-selector>
+        </div>
+      </div>
+
+      <div class="preference-section">
+        <div class="preference-header">
+          <ion-icon name="person-outline"></ion-icon>
+          <div class="preference-info">
+            <h3>{{ 'userInfo.userInfo' | translate }}</h3>
+            <p>{{ 'userInfo.subtitle' | translate }}</p>
+          </div>
+        </div>
+
+        <button class="preference-action" (click)="navigateToUserInfo()">
+          {{ 'userInfo.title' | translate }}
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
       </div>
     </div>
 
     <!-- Account Settings Card -->
     <div class="profile-card">
-      <h2 class="card-title">Configuración de Cuenta</h2>
+      <h2 class="card-title">{{ 'profile.accountSettings' | translate }}</h2>
 
       <div class="action-buttons">
-        <app-button class="button-secondary">Cambiar Contraseña</app-button>
-        <app-button class="button-secondary">Cerrar Sesión</app-button>
+        <app-button class="button-secondary">{{ 'profile.changePassword' | translate }}</app-button>
+        <app-button class="button-secondary">{{ 'profile.signOut' | translate }}</app-button>
       </div>
     </div>
 

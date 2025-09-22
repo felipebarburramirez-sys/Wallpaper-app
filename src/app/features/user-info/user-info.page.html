@@ -1,0 +1,94 @@
+<app-loading></app-loading>
+
+<div class="user-info-page">
+  <div class="user-info-header">
+    <button class="back-button" (click)="goBack()">
+      <ion-icon name="chevron-back"></ion-icon>
+    </button>
+    <h1>{{ 'userInfo.title' | translate }}</h1>
+  </div>
+
+  <div class="user-info-container">
+    <!-- Profile Section -->
+    <div class="profile-section card-strong">
+      <div class="profile-header">
+        <div class="profile-picture">
+          <img [src]="user.profilePicture" [alt]="user.name" />
+        </div>
+        <div class="profile-details">
+          <h2>{{ user.name }}</h2>
+          <p class="email">{{ user.email }}</p>
+          <p class="bio" *ngIf="user.bio">{{ user.bio }}</p>
+        </div>
+        <button class="edit-button button-accent" (click)="editProfile()">
+          <ion-icon name="create-outline"></ion-icon>
+          {{ 'userInfo.editProfile' | translate }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Statistics Section -->
+    <div class="statistics-section card-strong">
+      <h3>{{ 'userInfo.statistics' | translate }}</h3>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-value">{{ formatDate(user.joinedDate) }}</div>
+          <div class="stat-label">{{ 'userInfo.joinedDate' | translate }}</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">{{ user.totalPhotos }}</div>
+          <div class="stat-label">{{ 'userInfo.totalPhotos' | translate }}</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">{{ user.favoritePhotos }}</div>
+          <div class="stat-label">{{ 'userInfo.favoritePhotos' | translate }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Preferences Section -->
+    <div class="preferences-section card-strong">
+      <h3>{{ 'userInfo.preferences' | translate }}</h3>
+
+      <!-- Language Settings -->
+      <div class="preference-item">
+        <div class="preference-header">
+          <ion-icon name="language-outline"></ion-icon>
+          <div class="preference-info">
+            <h4>{{ 'userInfo.languageSettings' | translate }}</h4>
+            <p>{{ 'userInfo.currentLanguage' | translate }}: {{ getCurrentLanguageName() }}</p>
+          </div>
+        </div>
+        <div class="language-options">
+          <button
+            *ngFor="let lang of availableLanguages"
+            class="language-option"
+            [class.selected]="lang.code === currentLanguage"
+            (click)="changeLanguage(lang.code)">
+            <span class="flag">{{ lang.flag }}</span>
+            <span class="name">{{ lang.name }}</span>
+            <ion-icon
+              name="checkmark-circle"
+              class="check-icon"
+              *ngIf="lang.code === currentLanguage">
+            </ion-icon>
+          </button>
+        </div>
+      </div>
+
+      <!-- Account Settings -->
+      <div class="preference-item">
+        <div class="preference-header">
+          <ion-icon name="settings-outline"></ion-icon>
+          <div class="preference-info">
+            <h4>{{ 'profile.accountSettings' | translate }}</h4>
+            <p>{{ 'profile.subtitle' | translate }}</p>
+          </div>
+        </div>
+        <button class="preference-action button-strong" (click)="editProfile()">
+          {{ 'buttons.edit' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

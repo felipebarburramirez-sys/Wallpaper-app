@@ -9,7 +9,7 @@ import { BucketFile } from '../../../../../domain/models/bucket-file.model';
   providedIn: 'root',
 })
 export class Gallery {
-  public readonly bucket: string = 'wallpaper-bucket';
+  public readonly bucket: string = 'wallapaper-bucket';
   public readonly folder: string = 'img';
 
   public constructor(private supabase: SupabaseClient) {}

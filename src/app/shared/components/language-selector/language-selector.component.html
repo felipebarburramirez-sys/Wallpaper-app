@@ -1,0 +1,32 @@
+<div class="language-selector" (blur)="closeDropdown()">
+  <button
+    class="language-button"
+    (click)="toggleDropdown()"
+    [class.active]="isOpen"
+    type="button">
+    <span class="flag">{{ getCurrentLanguage()?.flag }}</span>
+    <span class="language-code">{{ getCurrentLanguage()?.code?.toUpperCase() }}</span>
+    <ion-icon
+      name="chevron-down"
+      class="chevron"
+      [class.rotated]="isOpen">
+    </ion-icon>
+  </button>
+
+  <div class="language-dropdown" [class.open]="isOpen">
+    <button
+      *ngFor="let language of languages"
+      class="language-option"
+      [class.selected]="language.code === currentLanguage"
+      (click)="selectLanguage(language.code)"
+      type="button">
+      <span class="flag">{{ language.flag }}</span>
+      <span class="name">{{ language.name }}</span>
+      <ion-icon
+        name="checkmark"
+        class="check-icon"
+        *ngIf="language.code === currentLanguage">
+      </ion-icon>
+    </button>
+  </div>
+</div>

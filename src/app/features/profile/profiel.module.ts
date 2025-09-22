@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { profilePageRoutingModule } from './profiel-routing.module';
 
-import { profilePage } from './profile.page';
+import profilePage from './profile.page';
 
 import { SharedModule } from '../../shared/shared-module';
 

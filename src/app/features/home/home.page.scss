@@ -1,6 +1,7 @@
 .home-page {
-  --background: var(--wallify-cream);
+  --background: var(--wallify-off-white);
   min-height: 100vh;
+  background: var(--wallify-off-white);
 }
 
 #container {
@@ -19,15 +20,15 @@
   font-size: 1.75rem;
   line-height: 1.3;
   color: var(--wallify-text-primary);
-  font-weight: 400;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   display: block;
   margin-bottom: 1rem;
 }
 
 #container p {
   font-size: 1.125rem;
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--wallify-text-secondary);
   margin: 0 0 1.5rem 0;
   max-width: 400px;
@@ -37,26 +38,51 @@
 
 #container a {
   text-decoration: none;
-  color: var(--wallify-sage-dark);
-  font-weight: 500;
+  color: var(--wallify-green);
+  font-weight: 600;
   transition: color 0.2s ease;
 
   &:hover {
-    color: var(--wallify-sage);
+    color: var(--wallify-green-dark);
   }
 }
 
-// Welcome message styling
 .welcome-section {
-  background: var(--wallify-warm-white);
+  background: var(--wallify-white);
   border-radius: var(--wallify-radius-xl);
   padding: 3rem 2rem;
-  box-shadow: var(--wallify-shadow-soft);
+  box-shadow: var(--wallify-shadow-medium);
   border: 1px solid var(--wallify-border-light);
   margin: 2rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: var(--wallify-shadow-strong);
+    transform: translateY(-2px);
+  }
 
   @media (max-width: 768px) {
     margin: 1rem;
     padding: 2rem 1.5rem;
+  }
+}
+
+ion-content {
+  --background: var(--wallify-off-white);
+
+  .gallery-container {
+    padding: 1rem;
+    background: var(--wallify-off-white);
+  }
+}
+
+.home-content {
+  background: var(--wallify-off-white);
+  min-height: 100vh;
+
+  .content-wrapper {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }

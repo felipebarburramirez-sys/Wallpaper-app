@@ -3,11 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--wallify-cream) 0%, var(--wallify-soft-beige) 100%);
+  background: linear-gradient(135deg, var(--wallify-off-white) 0%, var(--wallify-light-gray) 100%);
   padding: 2rem 1.25rem;
   position: relative;
 
-  // Subtle background pattern
   &::before {
     content: '';
     position: absolute;
@@ -15,75 +14,108 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: radial-gradient(circle at 25% 25%, rgba(157, 180, 161, 0.03) 0%, transparent 50%),
-                      radial-gradient(circle at 75% 75%, rgba(157, 180, 161, 0.03) 0%, transparent 50%);
+    background-image: radial-gradient(circle at 25% 25%, rgba(45, 90, 61, 0.04) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 75%, rgba(244, 230, 231, 0.06) 0%, transparent 50%);
     pointer-events: none;
   }
 }
 
 .login-container {
-  background: var(--wallify-warm-white);
+  background: var(--wallify-white);
   border-radius: var(--wallify-radius-xl);
-  box-shadow: var(--wallify-shadow-medium);
+  box-shadow: var(--wallify-shadow-strong);
   width: 100%;
   max-width: 420px;
   overflow: hidden;
   position: relative;
   border: 1px solid var(--wallify-border-light);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  }
 }
 
 .login-header {
-  padding: 2.5rem 2rem 1.5rem;
+  padding: 3rem 2rem 2rem;
   text-align: center;
-  background: var(--wallify-warm-white);
+  background: var(--wallify-white);
+  position: relative;
+
+  .language-selector {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
 
   h1 {
-    margin: 0 0 0.75rem;
-    font-size: 2rem;
-    font-weight: 400;
+    margin: 0 0 1rem;
+    font-size: 2.25rem;
+    font-weight: 700;
     color: var(--wallify-text-primary);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
   }
+
+  p {
+    margin: 0;
+    color: var(--wallify-text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}
+
+.login-form {
+  padding: 2rem 2rem 3rem;
+
+  .form-group {
+    margin-bottom: 2rem;
+  }
+
+  app-button {
+    width: 100%;
+
+    ::ng-deep button {
+      background: var(--wallify-black);
+      color: var(--wallify-white);
+      border: none;
+      border-radius: var(--wallify-radius-md);
+      padding: 18px 24px;
+      font-weight: 600;
+      font-size: 16px;
+      width: 100%;
+      transition: all 0.2s ease;
+      box-shadow: var(--wallify-shadow-soft);
+
+      &:hover {
+        background: var(--wallify-gray-800);
+        box-shadow: var(--wallify-shadow-medium);
+        transform: translateY(-1px);
+      }
+    }
+  }
+}
+
+.login-footer {
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid var(--wallify-border-light);
+  background: var(--wallify-pink-light);
 
   p {
     margin: 0;
     color: var(--wallify-text-secondary);
     font-size: 1rem;
-    line-height: 1.5;
-  }
-}
-
-.login-form {
-  padding: 1.5rem 2rem 2.5rem;
-
-  .form-group {
-    margin-bottom: 1.5rem;
-
-    // Custom input styling will be handled by app-input component
-  }
-
-  // Custom button styling will be handled by app-button component
-}
-
-.login-footer {
-  padding: 1.5rem 2rem;
-  text-align: center;
-  border-top: 1px solid var(--wallify-border-light);
-  background: var(--wallify-soft-beige);
-
-  p {
-    margin: 0;
-    color: var(--wallify-text-secondary);
-    font-size: 0.9375rem;
+    font-weight: 400;
 
     a {
-      color: var(--wallify-sage-dark);
+      color: var(--wallify-green);
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
       transition: color 0.2s ease;
 
       &:hover {
-        color: var(--wallify-sage);
+        color: var(--wallify-green-dark);
         text-decoration: underline;
       }
     }
@@ -102,10 +134,10 @@
   }
 
   .login-header {
-    padding-top: 2rem;
+    padding-top: 2.5rem;
 
     h1 {
-      font-size: 1.75rem;
+      font-size: 2rem;
     }
   }
 }

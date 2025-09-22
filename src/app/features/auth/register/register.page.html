@@ -4,6 +4,11 @@
   <div class="register-container">
 
     <div class="register-header">
+      <!-- Agregando selector de idioma en la esquina superior -->
+      <div class="language-selector">
+        <app-language-selector></app-language-selector>
+      </div>
+
       <h1>{{ 'auth.register.title' | translate }}</h1>
       <p>{{ 'auth.register.subtitle' | translate }}</p>
     </div>
@@ -11,7 +16,7 @@
     <div class="register-content">
       <app-user-form (onSubmit)="onUserSubmit($event)"></app-user-form>
 
-      <div class="login-footer">
+      <div class="register-footer">
         <p>
           {{ 'auth.register.footer' | translate }}
           <a (click)="navigateToLogin()">{{ 'auth.register.footerLink' | translate }}</a>

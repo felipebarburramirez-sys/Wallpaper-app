@@ -5,7 +5,8 @@
     "gallery": "Galería",
     "profile": "Perfil",
     "settings": "Ajustes",
-    "logout": "Cerrar sesión"
+    "logout": "Cerrar sesión",
+    "userInfo": "Mi Información"
   },
   "buttons": {
     "ok": "Aceptar",
@@ -19,33 +20,52 @@
     "selectFromGallery": "Elegir de la galería",
     "changePicture": "Cambiar foto",
     "close": "Cerrar",
-    "back": "Atrás"
+    "back": "Atrás",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "confirm": "Confirmar"
   },
   "auth": {
     "login": {
       "title": "¡Bienvenido de nuevo!",
-      "subtitle": "Inicia sesión para continuar",
+      "subtitle": "Inicia sesión para continuar con tu colección de wallpapers",
       "emailLabel": "Correo electrónico",
       "emailPlaceholder": "Ingresa tu correo",
       "emailError": "Por favor ingresa un correo válido",
       "passwordLabel": "Contraseña",
       "passwordPlaceholder": "Ingresa tu contraseña",
-      "passwordError": "Por favor ingresa una contraseña válida",
-      "cta": "Ingresar",
+      "passwordError": "La contraseña debe tener al menos 6 caracteres",
+      "cta": "Iniciar Sesión",
       "footer": "¿No tienes una cuenta?",
-      "footerLink": "Regístrate"
+      "footerLink": "Regístrate aquí",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "rememberMe": "Recordarme"
     },
     "register": {
-      "title": "Crear cuenta",
-      "subtitle": "Únete a la comunidad creando una nueva cuenta",
-      "cta": "Crear cuenta",
+      "title": "Crear cuenta nueva",
+      "subtitle": "Únete a nuestra comunidad y descubre increíbles wallpapers",
+      "nameLabel": "Nombre completo",
+      "namePlaceholder": "Ingresa tu nombre",
+      "nameError": "El nombre es obligatorio",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "Ingresa tu correo",
+      "emailError": "Por favor ingresa un correo válido",
+      "passwordLabel": "Contraseña",
+      "passwordPlaceholder": "Crea una contraseña segura",
+      "passwordError": "La contraseña debe tener al menos 6 caracteres",
+      "confirmPasswordLabel": "Confirmar contraseña",
+      "confirmPasswordPlaceholder": "Confirma tu contraseña",
+      "confirmPasswordError": "Las contraseñas no coinciden",
+      "cta": "Crear Cuenta",
       "footer": "¿Ya tienes una cuenta?",
-      "footerLink": "Inicia sesión"
+      "footerLink": "Inicia sesión aquí",
+      "termsAccept": "Acepto los términos y condiciones",
+      "termsError": "Debes aceptar los términos y condiciones"
     }
   },
   "userForm": {
     "titleCreate": "Crear nuevo usuario",
-    "titleEdit": "Editar usuario",
+    "titleEdit": "Editar información personal",
     "name": "Nombre",
     "surname": "Apellido",
     "email": "Correo electrónico",
@@ -53,15 +73,18 @@
     "takePicture": "Tomar foto",
     "selectFromGallery": "Elegir de la galería",
     "createUser": "Crear usuario",
-    "updateUser": "Actualizar usuario"
+    "updateUser": "Actualizar información",
+    "bio": "Biografía",
+    "bioPlaceholder": "Cuéntanos algo sobre ti..."
   },
   "profile": {
     "title": "Mi Perfil",
-    "subtitle": "Gestiona tu información personal",
+    "subtitle": "Gestiona tu información personal y preferencias",
     "displayName": "Nombre visible",
     "firstName": "Nombre",
     "lastName": "Apellido",
-    "email": "Correo",
+    "email": "Correo electrónico",
+    "bio": "Biografía",
     "saveChanges": "Guardar cambios",
     "cancel": "Cancelar",
     "accountSettings": "Configuración de Cuenta",
@@ -70,30 +93,94 @@
     "language": "Idioma",
     "lang_en": "Inglés",
     "lang_es": "Español",
-    "updated": "Cambios guardados"
+    "updated": "Cambios guardados exitosamente",
+    "preferences": "Preferencias",
+    "notifications": "Notificaciones",
+    "privacy": "Privacidad",
+    "theme": "Tema",
+    "darkMode": "Modo oscuro",
+    "lightMode": "Modo claro"
+  },
+  "userInfo": {
+    "title": "Información del Usuario",
+    "subtitle": "Visualiza y edita tu información personal",
+    "personalInfo": "Información Personal",
+    "accountInfo": "Información de Cuenta",
+    "preferences": "Preferencias",
+    "statistics": "Estadísticas",
+    "joinedDate": "Miembro desde",
+    "totalPhotos": "Fotos totales",
+    "favoritePhotos": "Fotos favoritas",
+    "editProfile": "Editar Perfil",
+    "changeLanguage": "Cambiar Idioma",
+    "languageSettings": "Configuración de Idioma",
+    "currentLanguage": "Idioma actual",
+    "selectLanguage": "Seleccionar idioma"
   },
   "gallery": {
-    "title": "Mis Fotos",
+    "title": "Mi Galería",
+    "subtitle": "Explora tu colección de wallpapers",
     "emptyTitle": "No hay fotos aún",
-    "emptySubtitle": "Haz clic en el botón + para agregar una foto",
-    "groupDateFormat": "fullDate"
+    "emptySubtitle": "Haz clic en el botón + para agregar tu primera foto",
+    "groupDateFormat": "fullDate",
+    "addPhoto": "Agregar Foto",
+    "viewPhoto": "Ver Foto",
+    "deletePhoto": "Eliminar Foto",
+    "sharePhoto": "Compartir Foto",
+    "downloadPhoto": "Descargar Foto",
+    "setAsWallpaper": "Establecer como Fondo"
+  },
+  "home": {
+    "title": "Inicio",
+    "welcome": "Bienvenido a Wallify",
+    "subtitle": "Descubre y colecciona los mejores wallpapers",
+    "featuredTitle": "Destacados",
+    "recentTitle": "Recientes",
+    "categoriesTitle": "Categorías",
+    "searchPlaceholder": "Buscar wallpapers..."
   },
   "input": {
     "required": "Este campo es obligatorio",
-    "minlength": "No cumple con la longitud mínima",
-    "maxlength": "Se excede la longitud máxima",
-    "email": "Por favor ingresa un correo válido",
-    "password": "Por favor ingresa una contraseña válida"
+    "minlength": "No cumple con la longitud mínima requerida",
+    "maxlength": "Se excede la longitud máxima permitida",
+    "email": "Por favor ingresa un correo electrónico válido",
+    "password": "La contraseña debe tener al menos 6 caracteres",
+    "confirmPassword": "Las contraseñas no coinciden",
+    "invalidFormat": "Formato inválido"
   },
   "toast": {
     "saved": "Guardado correctamente",
-    "error": "Ha ocurrido un error",
-    "authRequired": "Debes iniciar sesión",
-    "supabaseNoSession": "No hay sesión de Supabase. Vuelve a iniciar sesión."
+    "updated": "Actualizado exitosamente",
+    "deleted": "Eliminado correctamente",
+    "error": "Ha ocurrido un error inesperado",
+    "authRequired": "Debes iniciar sesión para continuar",
+    "supabaseNoSession": "Sesión expirada. Por favor, inicia sesión nuevamente",
+    "networkError": "Error de conexión. Verifica tu internet",
+    "permissionDenied": "Permisos insuficientes para esta acción",
+    "photoSaved": "Foto guardada en tu galería",
+    "languageChanged": "Idioma cambiado exitosamente"
   },
   "errors": {
     "unknown": "Error inesperado",
-    "network": "Error de red",
-    "forbidden": "No tienes permisos para realizar esta acción"
+    "network": "Error de conexión a internet",
+    "forbidden": "No tienes permisos para realizar esta acción",
+    "notFound": "Recurso no encontrado",
+    "serverError": "Error del servidor. Intenta más tarde",
+    "validationError": "Error de validación en los datos",
+    "authenticationError": "Error de autenticación"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "noData": "No hay datos disponibles",
+    "retry": "Reintentar",
+    "refresh": "Actualizar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "ascending": "Ascendente",
+    "descending": "Descendente",
+    "date": "Fecha",
+    "name": "Nombre",
+    "size": "Tamaño"
   }
 }

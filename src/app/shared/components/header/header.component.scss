@@ -3,10 +3,11 @@
   top: 0;
   z-index: 100;
   width: 100%;
-  background: rgba(250, 248, 245, 0.95);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--wallify-border-light);
   transition: all 0.3s ease;
+  box-shadow: var(--wallify-shadow-soft);
 }
 
 .header-content {
@@ -34,8 +35,8 @@
 
     .logo-text {
       font-size: 1.75rem;
-      font-weight: 400;
-      letter-spacing: -0.02em;
+      font-weight: 700;
+      letter-spacing: -0.03em;
       color: var(--wallify-text-primary);
 
       @media (max-width: 768px) {
@@ -48,6 +49,7 @@
 .navigation-section {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 .user-profile {
@@ -61,7 +63,7 @@
   background: transparent;
 
   &:hover {
-    background: var(--wallify-soft-beige);
+    background: var(--wallify-pink-light);
     transform: translateY(-1px);
   }
 
@@ -79,7 +81,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--wallify-sage-light), var(--wallify-sage));
+  background: linear-gradient(135deg, var(--wallify-green), var(--wallify-green-dark));
   box-shadow: var(--wallify-shadow-soft);
   transition: transform 0.2s ease;
 
@@ -105,8 +107,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 500;
-  color: white;
+  font-weight: 600;
+  color: var(--wallify-white);
   font-size: 0.875rem;
 
   &::before {
@@ -116,7 +118,7 @@
 }
 
 .user-name {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 0.9375rem;
   color: var(--wallify-text-primary);
 

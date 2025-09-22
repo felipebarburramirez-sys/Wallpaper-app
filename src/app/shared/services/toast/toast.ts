@@ -33,12 +33,29 @@ export class Toast {
     await this.showToast(message, 'warning', duration, position);
   }
 
-  async showSuccess(
+  public async showSuccess(
     message: string,
     duration: number = 3000,
     position: ToastPosition = 'bottom'
   ): Promise<void> {
     await this.showToast(message, 'success', duration, position);
+  }
+
+  // 🔹 Alias cortos para poder usar this.toast.success(...)
+  public success(message: string, duration = 3000, position: ToastPosition = 'bottom') {
+    return this.showSuccess(message, duration, position);
+  }
+
+  public error(message: string, duration = 4000, position: ToastPosition = 'bottom') {
+    return this.showError(message, duration, position);
+  }
+
+  public info(message: string, duration = 3000, position: ToastPosition = 'bottom') {
+    return this.showInfo(message, duration, position);
+  }
+
+  public warning(message: string, duration = 3500, position: ToastPosition = 'bottom') {
+    return this.showWarning(message, duration, position);
   }
 
   private async showToast(

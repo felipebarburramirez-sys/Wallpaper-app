@@ -37,6 +37,10 @@ const routes: Routes = [
       ),
     canActivate: [AuthGuard],
   },
+  {
+    path: 'user-info',
+    loadChildren: () => import('./features/user-info/user-info.module').then( m => m.UserInfoPageModule)
+  },
 ];
 
 @NgModule({

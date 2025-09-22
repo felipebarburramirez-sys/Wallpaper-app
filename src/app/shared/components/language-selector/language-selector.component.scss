@@ -1,0 +1,147 @@
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.language-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--wallify-white);
+  border: 1px solid var(--wallify-border-light);
+  border-radius: var(--wallify-radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--wallify-text-primary);
+  box-shadow: var(--wallify-shadow-soft);
+  min-width: 80px;
+
+  &:hover {
+    background: var(--wallify-gray-50);
+    border-color: var(--wallify-border-medium);
+    box-shadow: var(--wallify-shadow-medium);
+  }
+
+  &.active {
+    background: var(--wallify-gray-50);
+    border-color: var(--wallify-green);
+    box-shadow: 0 0 0 2px rgba(45, 90, 61, 0.1);
+  }
+
+  .flag {
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .language-code {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .chevron {
+    font-size: 16px;
+    transition: transform 0.2s ease;
+    color: var(--wallify-text-muted);
+
+    &.rotated {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.language-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--wallify-white);
+  border: 1px solid var(--wallify-border-light);
+  border-radius: var(--wallify-radius-md);
+  box-shadow: var(--wallify-shadow-strong);
+  min-width: 140px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s ease;
+  z-index: 1000;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  color: var(--wallify-text-primary);
+  text-align: left;
+
+  &:first-child {
+    border-radius: var(--wallify-radius-md) var(--wallify-radius-md) 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 var(--wallify-radius-md) var(--wallify-radius-md);
+  }
+
+  &:hover {
+    background: var(--wallify-pink-light);
+  }
+
+  &.selected {
+    background: var(--wallify-green);
+    color: var(--wallify-white);
+
+    .check-icon {
+      color: var(--wallify-white);
+    }
+  }
+
+  .flag {
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .name {
+    flex: 1;
+    font-weight: 500;
+  }
+
+  .check-icon {
+    font-size: 16px;
+    color: var(--wallify-green);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 576px) {
+  .language-button {
+    padding: 8px 12px;
+    min-width: 70px;
+
+    .language-code {
+      font-size: 13px;
+    }
+  }
+
+  .language-dropdown {
+    min-width: 120px;
+  }
+
+  .language-option {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}

@@ -1,14 +1,14 @@
 .custom-button {
   --border-radius: var(--wallify-radius-md);
   --transition: all 0.2s ease;
-  --background: var(--wallify-sage);
-  --background-hover: var(--wallify-sage-dark);
-  --background-focused: var(--wallify-sage-dark);
-  --color: white;
+  --background: var(--wallify-green);
+  --background-hover: var(--wallify-green-dark);
+  --background-focused: var(--wallify-green-dark);
+  --color: var(--wallify-white);
   --padding-start: 1.5rem;
   --padding-end: 1.5rem;
   --height: 3rem;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
   letter-spacing: -0.01em;
   box-shadow: var(--wallify-shadow-soft);
@@ -46,28 +46,41 @@
     --padding-start: 2rem;
     --padding-end: 2rem;
     font-size: 1.125rem;
-    font-weight: 500;
+    font-weight: 600;
   }
 
-  // Secondary button variant
   &.button-secondary {
-    --background: var(--wallify-warm-white);
-    --background-hover: var(--wallify-soft-beige);
-    --background-focused: var(--wallify-soft-beige);
+    --background: var(--wallify-white);
+    --background-hover: var(--wallify-pink-light);
+    --background-focused: var(--wallify-pink-light);
     --color: var(--wallify-text-primary);
     border: 1px solid var(--wallify-border-light);
   }
 
-  // Outline button variant
   &.button-outline {
     --background: transparent;
-    --background-hover: var(--wallify-sage);
-    --background-focused: var(--wallify-sage);
-    --color: var(--wallify-sage);
-    border: 1px solid var(--wallify-sage);
+    --background-hover: var(--wallify-green);
+    --background-focused: var(--wallify-green);
+    --color: var(--wallify-green);
+    border: 1px solid var(--wallify-green);
 
     &:hover {
-      --color: white;
+      --color: var(--wallify-white);
     }
+  }
+
+  &.button-accent {
+    --background: var(--wallify-pink);
+    --background-hover: var(--wallify-pink-dark);
+    --background-focused: var(--wallify-pink-dark);
+    --color: var(--wallify-white);
+  }
+
+  &.button-strong {
+    --background: var(--wallify-text-primary);
+    --background-hover: var(--wallify-text-secondary);
+    --background-focused: var(--wallify-text-secondary);
+    --color: var(--wallify-white);
+    font-weight: 700;
   }
 }

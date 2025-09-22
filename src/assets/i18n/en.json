@@ -5,7 +5,8 @@
     "gallery": "Gallery",
     "profile": "Profile",
     "settings": "Settings",
-    "logout": "Sign out"
+    "logout": "Sign out",
+    "userInfo": "My Information"
   },
   "buttons": {
     "ok": "OK",
@@ -19,33 +20,52 @@
     "selectFromGallery": "Select from Gallery",
     "changePicture": "Change Picture",
     "close": "Close",
-    "back": "Back"
+    "back": "Back",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirm": "Confirm"
   },
   "auth": {
     "login": {
-      "title": "Welcome Back",
-      "subtitle": "Sign in to your account to continue",
+      "title": "Welcome Back!",
+      "subtitle": "Sign in to continue with your wallpaper collection",
       "emailLabel": "Email Address",
       "emailPlaceholder": "Enter your email address",
       "emailError": "Please enter a valid email address",
       "passwordLabel": "Password",
       "passwordPlaceholder": "Enter your password",
-      "passwordError": "Please enter a valid password",
+      "passwordError": "Password must be at least 6 characters long",
       "cta": "Sign In",
       "footer": "Don't have an account?",
-      "footerLink": "Sign up"
+      "footerLink": "Sign up here",
+      "forgotPassword": "Forgot your password?",
+      "rememberMe": "Remember me"
     },
     "register": {
-      "title": "Create Account",
-      "subtitle": "Join our community by creating a new account",
-      "cta": "Create account",
+      "title": "Create New Account",
+      "subtitle": "Join our community and discover amazing wallpapers",
+      "nameLabel": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "nameError": "Name is required",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "emailError": "Please enter a valid email address",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Create a secure password",
+      "passwordError": "Password must be at least 6 characters long",
+      "confirmPasswordLabel": "Confirm Password",
+      "confirmPasswordPlaceholder": "Confirm your password",
+      "confirmPasswordError": "Passwords do not match",
+      "cta": "Create Account",
       "footer": "Already have an account?",
-      "footerLink": "Sign In"
+      "footerLink": "Sign in here",
+      "termsAccept": "I accept the terms and conditions",
+      "termsError": "You must accept the terms and conditions"
     }
   },
   "userForm": {
     "titleCreate": "Create New User",
-    "titleEdit": "Edit User",
+    "titleEdit": "Edit Personal Information",
     "name": "Name",
     "surname": "Surname",
     "email": "Email",
@@ -53,15 +73,18 @@
     "takePicture": "Take Picture",
     "selectFromGallery": "Select from Gallery",
     "createUser": "Create User",
-    "updateUser": "Update User"
+    "updateUser": "Update Information",
+    "bio": "Biography",
+    "bioPlaceholder": "Tell us something about yourself..."
   },
   "profile": {
     "title": "My Profile",
-    "subtitle": "Manage your personal information",
+    "subtitle": "Manage your personal information and preferences",
     "displayName": "Display name",
-    "firstName": "Name",
-    "lastName": "Surname",
+    "firstName": "First Name",
+    "lastName": "Last Name",
     "email": "Email",
+    "bio": "Biography",
     "saveChanges": "Save Changes",
     "cancel": "Cancel",
     "accountSettings": "Account Settings",
@@ -70,30 +93,94 @@
     "language": "Language",
     "lang_en": "English",
     "lang_es": "Spanish",
-    "updated": "Changes saved"
+    "updated": "Changes saved successfully",
+    "preferences": "Preferences",
+    "notifications": "Notifications",
+    "privacy": "Privacy",
+    "theme": "Theme",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode"
+  },
+  "userInfo": {
+    "title": "User Information",
+    "subtitle": "View and edit your personal information",
+    "personalInfo": "Personal Information",
+    "accountInfo": "Account Information",
+    "preferences": "Preferences",
+    "statistics": "Statistics",
+    "joinedDate": "Member since",
+    "totalPhotos": "Total photos",
+    "favoritePhotos": "Favorite photos",
+    "editProfile": "Edit Profile",
+    "changeLanguage": "Change Language",
+    "languageSettings": "Language Settings",
+    "currentLanguage": "Current language",
+    "selectLanguage": "Select language"
   },
   "gallery": {
-    "title": "My Photos",
+    "title": "My Gallery",
+    "subtitle": "Explore your wallpaper collection",
     "emptyTitle": "No photos yet",
-    "emptySubtitle": "Click the + button to add a photo",
-    "groupDateFormat": "fullDate"
+    "emptySubtitle": "Click the + button to add your first photo",
+    "groupDateFormat": "fullDate",
+    "addPhoto": "Add Photo",
+    "viewPhoto": "View Photo",
+    "deletePhoto": "Delete Photo",
+    "sharePhoto": "Share Photo",
+    "downloadPhoto": "Download Photo",
+    "setAsWallpaper": "Set as Wallpaper"
+  },
+  "home": {
+    "title": "Home",
+    "welcome": "Welcome to Wallify",
+    "subtitle": "Discover and collect the best wallpapers",
+    "featuredTitle": "Featured",
+    "recentTitle": "Recent",
+    "categoriesTitle": "Categories",
+    "searchPlaceholder": "Search wallpapers..."
   },
   "input": {
     "required": "This field is required",
-    "minlength": "Minimum length not met",
+    "minlength": "Minimum length requirement not met",
     "maxlength": "Maximum length exceeded",
     "email": "Please enter a valid email address",
-    "password": "Please enter a valid password"
+    "password": "Password must be at least 6 characters long",
+    "confirmPassword": "Passwords do not match",
+    "invalidFormat": "Invalid format"
   },
   "toast": {
     "saved": "Saved successfully",
-    "error": "Something went wrong",
-    "authRequired": "You need to sign in",
-    "supabaseNoSession": "No Supabase session. Please sign in again."
+    "updated": "Updated successfully",
+    "deleted": "Deleted successfully",
+    "error": "An unexpected error occurred",
+    "authRequired": "You need to sign in to continue",
+    "supabaseNoSession": "Session expired. Please sign in again",
+    "networkError": "Connection error. Check your internet",
+    "permissionDenied": "Insufficient permissions for this action",
+    "photoSaved": "Photo saved to your gallery",
+    "languageChanged": "Language changed successfully"
   },
   "errors": {
     "unknown": "Unexpected error",
-    "network": "Network error",
-    "forbidden": "You don't have permission to perform this action"
+    "network": "Internet connection error",
+    "forbidden": "You don't have permission to perform this action",
+    "notFound": "Resource not found",
+    "serverError": "Server error. Please try again later",
+    "validationError": "Data validation error",
+    "authenticationError": "Authentication error"
+  },
+  "common": {
+    "loading": "Loading...",
+    "noData": "No data available",
+    "retry": "Retry",
+    "refresh": "Refresh",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "ascending": "Ascending",
+    "descending": "Descending",
+    "date": "Date",
+    "name": "Name",
+    "size": "Size"
   }
 }
