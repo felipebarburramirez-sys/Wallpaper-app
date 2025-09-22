@@ -1,0 +1,7 @@
+{
+  "name": "wallify-wallpaper",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

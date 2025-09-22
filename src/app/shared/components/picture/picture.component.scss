@@ -1,0 +1,38 @@
+.picture-card {
+  margin: 0;
+  border-radius: var(--wallify-radius-md);
+  overflow: hidden;
+  box-shadow: var(--wallify-shadow-soft);
+  transition: all 0.3s ease;
+  background: var(--wallify-warm-white);
+  border: 1px solid var(--wallify-border-light);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--wallify-shadow-medium);
+  }
+}
+
+.picture-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.picture-content {
+  padding: 0.875rem;
+  background: var(--wallify-warm-white);
+
+  .picture-date {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: var(--wallify-text-muted);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+}

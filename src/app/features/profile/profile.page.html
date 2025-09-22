@@ -1,0 +1,87 @@
+<app-loading></app-loading>
+<app-header></app-header>
+
+<ion-content [fullscreen]="true" class="profile-page">
+  <!-- Completely redesigned profile page with minimalist layout -->
+  <div class="profile-container">
+
+    <!-- Profile Header -->
+    <div class="profile-header">
+      <div class="profile-avatar">
+        <div class="avatar-placeholder"></div>
+        <button class="edit-avatar-btn">
+          <ion-icon name="camera"></ion-icon>
+        </button>
+      </div>
+      <h1 class="profile-title">Mi Perfil</h1>
+      <p class="profile-subtitle">Gestiona tu información personal</p>
+    </div>
+
+    <!-- Profile Stats -->
+    <div class="profile-stats">
+      <div class="stat-item">
+        <div class="stat-number">0</div>
+        <div class="stat-label">Fotos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">0</div>
+        <div class="stat-label">Álbumes</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">0</div>
+        <div class="stat-label">Favoritas</div>
+      </div>
+    </div>
+
+    <!-- Profile Information Card -->
+    <div class="profile-card">
+      <h2 class="card-title">Información Personal</h2>
+
+      <div class="form-section">
+        <app-input
+          id="name"
+          type="text"
+          label="Nombre"
+          placeholder="Tu nombre"
+          [required]="true">
+        </app-input>
+      </div>
+
+      <div class="form-section">
+        <app-input
+          id="surname"
+          type="text"
+          label="Apellido"
+          placeholder="Tu apellido"
+          [required]="true">
+        </app-input>
+      </div>
+
+      <div class="form-section">
+        <app-input
+          id="email"
+          type="email"
+          label="Correo Electrónico"
+          placeholder="tu@email.com"
+          [required]="true">
+        </app-input>
+      </div>
+
+      <div class="action-buttons">
+        <app-button class="button-large">Guardar Cambios</app-button>
+        <app-button class="button-large button-outline">Cancelar</app-button>
+      </div>
+    </div>
+
+    <!-- Account Settings Card -->
+    <div class="profile-card">
+      <h2 class="card-title">Configuración de Cuenta</h2>
+
+      <div class="action-buttons">
+        <app-button class="button-secondary">Cambiar Contraseña</app-button>
+        <app-button class="button-secondary">Cerrar Sesión</app-button>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

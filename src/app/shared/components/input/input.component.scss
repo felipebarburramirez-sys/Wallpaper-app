@@ -1,0 +1,76 @@
+.custom-input {
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  margin-bottom: 1.5rem;
+
+  ion-label {
+    font-weight: 500;
+    color: var(--wallify-text-primary);
+    font-size: 0.9375rem;
+    margin-bottom: 0.5rem;
+    display: block;
+
+    .required-asterisk {
+      color: var(--wallify-sage-dark);
+    }
+  }
+
+  ion-input {
+    --padding-start: 1rem;
+    --padding-end: 1rem;
+    --padding-top: 0.875rem;
+    --padding-bottom: 0.875rem;
+    --background: var(--wallify-warm-white);
+    --color: var(--wallify-text-primary);
+    --placeholder-color: var(--wallify-text-muted);
+    border: 1px solid var(--wallify-border-light);
+    border-radius: var(--wallify-radius-md);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    box-shadow: var(--wallify-shadow-soft);
+
+    &:focus-within {
+      border-color: var(--wallify-sage);
+      box-shadow: 0 0 0 3px rgba(157, 180, 161, 0.1);
+      transform: translateY(-1px);
+    }
+
+    &:hover:not(:focus-within) {
+      border-color: var(--wallify-sage-light);
+    }
+
+    &.has-error {
+      border-color: #e74c3c;
+      box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+    }
+  }
+
+  // Error message styling
+  .error-message {
+    color: #e74c3c;
+    font-size: 0.8125rem;
+    margin-top: 0.375rem;
+    margin-left: 0.25rem;
+  }
+}
+
+.toggle-password {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--wallify-sage-dark);
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0.25rem;
+  border-radius: var(--wallify-radius-sm);
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: var(--wallify-sage);
+    background: var(--wallify-soft-beige);
+  }
+}

@@ -1,0 +1,136 @@
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: rgba(250, 248, 245, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--wallify-border-light);
+  transition: all 0.3s ease;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 0.875rem 1.25rem;
+  }
+}
+
+.logo-section {
+  .logo-link {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    .logo-text {
+      font-size: 1.75rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--wallify-text-primary);
+
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.navigation-section {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  cursor: pointer;
+  padding: 0.625rem 1rem;
+  border-radius: var(--wallify-radius-md);
+  transition: all 0.2s ease;
+  background: transparent;
+
+  &:hover {
+    background: var(--wallify-soft-beige);
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 600px) {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+}
+
+.avatar-container {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--wallify-sage-light), var(--wallify-sage));
+  box-shadow: var(--wallify-shadow-soft);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 600px) {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: white;
+  font-size: 0.875rem;
+
+  &::before {
+    content: "👤";
+    font-size: 1.125rem;
+  }
+}
+
+.user-name {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  color: var(--wallify-text-primary);
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.login-prompt {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  color: var(--wallify-text-secondary);
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+}

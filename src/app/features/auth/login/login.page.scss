@@ -1,0 +1,111 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--wallify-cream) 0%, var(--wallify-soft-beige) 100%);
+  padding: 2rem 1.25rem;
+  position: relative;
+
+  // Subtle background pattern
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle at 25% 25%, rgba(157, 180, 161, 0.03) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 75%, rgba(157, 180, 161, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+  }
+}
+
+.login-container {
+  background: var(--wallify-warm-white);
+  border-radius: var(--wallify-radius-xl);
+  box-shadow: var(--wallify-shadow-medium);
+  width: 100%;
+  max-width: 420px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--wallify-border-light);
+}
+
+.login-header {
+  padding: 2.5rem 2rem 1.5rem;
+  text-align: center;
+  background: var(--wallify-warm-white);
+
+  h1 {
+    margin: 0 0 0.75rem;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--wallify-text-primary);
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    margin: 0;
+    color: var(--wallify-text-secondary);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+.login-form {
+  padding: 1.5rem 2rem 2.5rem;
+
+  .form-group {
+    margin-bottom: 1.5rem;
+
+    // Custom input styling will be handled by app-input component
+  }
+
+  // Custom button styling will be handled by app-button component
+}
+
+.login-footer {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  border-top: 1px solid var(--wallify-border-light);
+  background: var(--wallify-soft-beige);
+
+  p {
+    margin: 0;
+    color: var(--wallify-text-secondary);
+    font-size: 0.9375rem;
+
+    a {
+      color: var(--wallify-sage-dark);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--wallify-sage);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .login-page {
+    padding: 1.25rem;
+  }
+
+  .login-header,
+  .login-form {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .login-header {
+    padding-top: 2rem;
+
+    h1 {
+      font-size: 1.75rem;
+    }
+  }
+}

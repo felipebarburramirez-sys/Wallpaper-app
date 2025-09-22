@@ -1,0 +1,117 @@
+.gallery-content {
+  --background: var(--wallify-cream);
+  padding: 1rem 0;
+}
+
+.date-group {
+  margin-bottom: 2.5rem;
+
+  &:last-child {
+    margin-bottom: 1rem;
+  }
+}
+
+.date-divider {
+  --background: transparent;
+  padding: 0 1.5rem 1rem;
+  margin-bottom: 1.25rem;
+
+  ion-label {
+    font-weight: 500;
+    color: var(--wallify-text-primary);
+    font-size: 1.125rem;
+    letter-spacing: -0.01em;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1.5rem;
+    right: 1.5rem;
+    height: 1px;
+    background: var(--wallify-border-light);
+  }
+}
+
+.pictures-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 0 1.5rem;
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.picture-item {
+  border-radius: var(--wallify-radius-md);
+  overflow: hidden;
+  background: var(--wallify-warm-white);
+  box-shadow: var(--wallify-shadow-soft);
+  transition: all 0.3s ease;
+  aspect-ratio: 1;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--wallify-shadow-medium);
+  }
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+  padding: 0 2rem;
+
+  .empty-icon {
+    font-size: 4rem;
+    color: var(--wallify-sage-light);
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+  }
+
+  h3 {
+    margin: 0 0 0.75rem 0;
+    color: var(--wallify-text-primary);
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    margin: 0;
+    color: var(--wallify-text-secondary);
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 300px;
+  }
+}
+
+// Enhanced FAB button styling
+ion-fab-button {
+  --background: var(--wallify-sage);
+  --background-hover: var(--wallify-sage-dark);
+  --background-focused: var(--wallify-sage-dark);
+  --color: white;
+  --box-shadow: var(--wallify-shadow-medium);
+  --border-radius: var(--wallify-radius-lg);
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

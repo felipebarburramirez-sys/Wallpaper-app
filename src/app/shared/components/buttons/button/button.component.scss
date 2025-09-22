@@ -1,0 +1,73 @@
+.custom-button {
+  --border-radius: var(--wallify-radius-md);
+  --transition: all 0.2s ease;
+  --background: var(--wallify-sage);
+  --background-hover: var(--wallify-sage-dark);
+  --background-focused: var(--wallify-sage-dark);
+  --color: white;
+  --padding-start: 1.5rem;
+  --padding-end: 1.5rem;
+  --height: 3rem;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  box-shadow: var(--wallify-shadow-soft);
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--wallify-shadow-medium);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &.button-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    --background: var(--wallify-gray-300);
+    --color: var(--wallify-text-muted);
+
+    &:hover {
+      transform: none;
+      box-shadow: var(--wallify-shadow-soft);
+    }
+  }
+
+  &.button-small {
+    --height: 2.25rem;
+    --padding-start: 1rem;
+    --padding-end: 1rem;
+    font-size: 0.875rem;
+  }
+
+  &.button-large {
+    --height: 3.5rem;
+    --padding-start: 2rem;
+    --padding-end: 2rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
+  // Secondary button variant
+  &.button-secondary {
+    --background: var(--wallify-warm-white);
+    --background-hover: var(--wallify-soft-beige);
+    --background-focused: var(--wallify-soft-beige);
+    --color: var(--wallify-text-primary);
+    border: 1px solid var(--wallify-border-light);
+  }
+
+  // Outline button variant
+  &.button-outline {
+    --background: transparent;
+    --background-hover: var(--wallify-sage);
+    --background-focused: var(--wallify-sage);
+    --color: var(--wallify-sage);
+    border: 1px solid var(--wallify-sage);
+
+    &:hover {
+      --color: white;
+    }
+  }
+}

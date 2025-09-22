@@ -1,0 +1,62 @@
+.home-page {
+  --background: var(--wallify-cream);
+  min-height: 100vh;
+}
+
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#container strong {
+  font-size: 1.75rem;
+  line-height: 1.3;
+  color: var(--wallify-text-primary);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+#container p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--wallify-text-secondary);
+  margin: 0 0 1.5rem 0;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#container a {
+  text-decoration: none;
+  color: var(--wallify-sage-dark);
+  font-weight: 500;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--wallify-sage);
+  }
+}
+
+// Welcome message styling
+.welcome-section {
+  background: var(--wallify-warm-white);
+  border-radius: var(--wallify-radius-xl);
+  padding: 3rem 2rem;
+  box-shadow: var(--wallify-shadow-soft);
+  border: 1px solid var(--wallify-border-light);
+  margin: 2rem;
+
+  @media (max-width: 768px) {
+    margin: 1rem;
+    padding: 2rem 1.5rem;
+  }
+}
