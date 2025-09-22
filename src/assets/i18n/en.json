@@ -1,0 +1,99 @@
+{
+  "app": { "title": "Wallify" },
+  "nav": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Sign out"
+  },
+  "buttons": {
+    "ok": "OK",
+    "cancel": "Cancel",
+    "save": "Save",
+    "update": "Update",
+    "create": "Create",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "takePhoto": "Take photo",
+    "selectFromGallery": "Select from Gallery",
+    "changePicture": "Change Picture",
+    "close": "Close",
+    "back": "Back"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your account to continue",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "emailError": "Please enter a valid email address",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "passwordError": "Please enter a valid password",
+      "cta": "Sign In",
+      "footer": "Don't have an account?",
+      "footerLink": "Sign up"
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Join our community by creating a new account",
+      "cta": "Create account",
+      "footer": "Already have an account?",
+      "footerLink": "Sign In"
+    }
+  },
+  "userForm": {
+    "titleCreate": "Create New User",
+    "titleEdit": "Edit User",
+    "name": "Name",
+    "surname": "Surname",
+    "email": "Email",
+    "picture": "Profile Picture",
+    "takePicture": "Take Picture",
+    "selectFromGallery": "Select from Gallery",
+    "createUser": "Create User",
+    "updateUser": "Update User"
+  },
+  "profile": {
+    "title": "My Profile",
+    "subtitle": "Manage your personal information",
+    "displayName": "Display name",
+    "firstName": "Name",
+    "lastName": "Surname",
+    "email": "Email",
+    "saveChanges": "Save Changes",
+    "cancel": "Cancel",
+    "accountSettings": "Account Settings",
+    "changePassword": "Change Password",
+    "signOut": "Sign Out",
+    "language": "Language",
+    "lang_en": "English",
+    "lang_es": "Spanish",
+    "updated": "Changes saved"
+  },
+  "gallery": {
+    "title": "My Photos",
+    "emptyTitle": "No photos yet",
+    "emptySubtitle": "Click the + button to add a photo",
+    "groupDateFormat": "fullDate"
+  },
+  "input": {
+    "required": "This field is required",
+    "minlength": "Minimum length not met",
+    "maxlength": "Maximum length exceeded",
+    "email": "Please enter a valid email address",
+    "password": "Please enter a valid password"
+  },
+  "toast": {
+    "saved": "Saved successfully",
+    "error": "Something went wrong",
+    "authRequired": "You need to sign in",
+    "supabaseNoSession": "No Supabase session. Please sign in again."
+  },
+  "errors": {
+    "unknown": "Unexpected error",
+    "network": "Network error",
+    "forbidden": "You don't have permission to perform this action"
+  }
+}

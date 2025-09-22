@@ -20,6 +20,8 @@ import { UserFormComponent } from './components/user-form/user-form.component';
 
 import { Toast } from './services/toast/toast';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 @NgModule({
   declarations: [
     ButtonComponent,
@@ -40,6 +42,7 @@ import { Toast } from './services/toast/toast';
     IonicModule.forRoot(),
     ReactiveFormsModule,
     RouterModule,
+    TranslateModule,
   ],
   exports: [
     CommonModule,
@@ -58,6 +61,7 @@ import { Toast } from './services/toast/toast';
     PictureComponent,
     LoadingComponent,
     UserFormComponent,
+    TranslateModule,
   ],
   providers: [Toast],
 })

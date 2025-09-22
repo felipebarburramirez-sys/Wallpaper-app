@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
 
@@ -7,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['app.component.scss'],
 	standalone: false,
 
-}) export class AppComponent implements OnInit {
+})
+export class AppComponent implements OnInit {
+  constructor(private translate: TranslateService) {}
 
-	public constructor() {}
-
-	public async ngOnInit(): Promise<void> {}
-
+  ngOnInit() {
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+    document.documentElement.lang = 'en';
+  }
 }

@@ -1,0 +1,99 @@
+{
+  "app": { "title": "Wallify" },
+  "nav": {
+    "home": "Inicio",
+    "gallery": "Galería",
+    "profile": "Perfil",
+    "settings": "Ajustes",
+    "logout": "Cerrar sesión"
+  },
+  "buttons": {
+    "ok": "Aceptar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "update": "Actualizar",
+    "create": "Crear",
+    "signIn": "Ingresar",
+    "signUp": "Registrarse",
+    "takePhoto": "Tomar foto",
+    "selectFromGallery": "Elegir de la galería",
+    "changePicture": "Cambiar foto",
+    "close": "Cerrar",
+    "back": "Atrás"
+  },
+  "auth": {
+    "login": {
+      "title": "¡Bienvenido de nuevo!",
+      "subtitle": "Inicia sesión para continuar",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "Ingresa tu correo",
+      "emailError": "Por favor ingresa un correo válido",
+      "passwordLabel": "Contraseña",
+      "passwordPlaceholder": "Ingresa tu contraseña",
+      "passwordError": "Por favor ingresa una contraseña válida",
+      "cta": "Ingresar",
+      "footer": "¿No tienes una cuenta?",
+      "footerLink": "Regístrate"
+    },
+    "register": {
+      "title": "Crear cuenta",
+      "subtitle": "Únete a la comunidad creando una nueva cuenta",
+      "cta": "Crear cuenta",
+      "footer": "¿Ya tienes una cuenta?",
+      "footerLink": "Inicia sesión"
+    }
+  },
+  "userForm": {
+    "titleCreate": "Crear nuevo usuario",
+    "titleEdit": "Editar usuario",
+    "name": "Nombre",
+    "surname": "Apellido",
+    "email": "Correo electrónico",
+    "picture": "Foto de perfil",
+    "takePicture": "Tomar foto",
+    "selectFromGallery": "Elegir de la galería",
+    "createUser": "Crear usuario",
+    "updateUser": "Actualizar usuario"
+  },
+  "profile": {
+    "title": "Mi Perfil",
+    "subtitle": "Gestiona tu información personal",
+    "displayName": "Nombre visible",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo",
+    "saveChanges": "Guardar cambios",
+    "cancel": "Cancelar",
+    "accountSettings": "Configuración de Cuenta",
+    "changePassword": "Cambiar Contraseña",
+    "signOut": "Cerrar Sesión",
+    "language": "Idioma",
+    "lang_en": "Inglés",
+    "lang_es": "Español",
+    "updated": "Cambios guardados"
+  },
+  "gallery": {
+    "title": "Mis Fotos",
+    "emptyTitle": "No hay fotos aún",
+    "emptySubtitle": "Haz clic en el botón + para agregar una foto",
+    "groupDateFormat": "fullDate"
+  },
+  "input": {
+    "required": "Este campo es obligatorio",
+    "minlength": "No cumple con la longitud mínima",
+    "maxlength": "Se excede la longitud máxima",
+    "email": "Por favor ingresa un correo válido",
+    "password": "Por favor ingresa una contraseña válida"
+  },
+  "toast": {
+    "saved": "Guardado correctamente",
+    "error": "Ha ocurrido un error",
+    "authRequired": "Debes iniciar sesión",
+    "supabaseNoSession": "No hay sesión de Supabase. Vuelve a iniciar sesión."
+  },
+  "errors": {
+    "unknown": "Error inesperado",
+    "network": "Error de red",
+    "forbidden": "No tienes permisos para realizar esta acción"
+  }
+}
