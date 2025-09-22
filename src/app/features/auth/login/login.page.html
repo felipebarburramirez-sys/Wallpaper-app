@@ -1,48 +1,53 @@
 <app-loading></app-loading>
 
 <div class="login-page">
-
   <div class="login-container">
 
     <div class="login-header">
-
-    <h1>{{ 'auth.login.title' | translate }}</h1>
-    <p>{{ 'auth.login.subtitle' | translate }}</p>
-
+      <h1>{{ 'auth.login.title' | translate }}</h1>
+      <p>{{ 'auth.login.subtitle' | translate }}</p>
     </div>
 
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
-
       <div class="form-group">
-
-        <app-input id="email" formControlName="email" type="email" label="Email Address"
-          placeholder="Enter your email address" [required]="true" [minLength]="3"
-          errorMessage="Please enter a valid email address"></app-input>
-
+        <app-input
+          id="email"
+          formControlName="email"
+          type="email"
+          [label]="'auth.login.emailLabel' | translate"
+          [placeholder]="'auth.login.emailPlaceholder' | translate"
+          [required]="true"
+          [minLength]="3"
+          [errorMessage]="'auth.login.emailError' | translate">
+        </app-input>
       </div>
 
       <div class="form-group">
-
         <div class="password-input-container">
-
-          <app-input id="password" formControlName="password" type="password" label="Password"
-            placeholder="Enter your password" [required]="true" [minLength]="3"
-            errorMessage="Please enter a valid password"></app-input>
-
+          <app-input
+            id="password"
+            formControlName="password"
+            type="password"
+            [label]="'auth.login.passwordLabel' | translate"
+            [placeholder]="'auth.login.passwordPlaceholder' | translate"
+            [required]="true"
+            [minLength]="3"
+            [errorMessage]="'auth.login.passwordError' | translate">
+          </app-input>
         </div>
-
       </div>
 
-      <app-button type="submit">Sign In</app-button>
-
+      <app-button type="submit">{{ 'buttons.signIn' | translate }}</app-button>
     </form>
 
     <div class="login-footer">
-
-      <p>Don't have an account? <a href="javascript:void(0)" (click)="navigateToRegister()">Sign up</a></p>
-
+      <p>
+        {{ 'auth.login.footer' | translate }}
+        <a href="javascript:void(0)" (click)="navigateToRegister()">
+          {{ 'auth.login.footerLink' | translate }}
+        </a>
+      </p>
     </div>
 
   </div>
-
 </div>
