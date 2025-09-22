@@ -12,4 +12,9 @@ export const environment = {
     url: 'https://prhvrlzrmbfwigrkkcwe.supabase.co',
     key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InByaHZybHpybWJmd2lncmtrY3dlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg1NTY4MDgsImV4cCI6MjA3NDEzMjgwOH0.s1QUqGBV3TLOa5BdfKGFq2tYf6JTMpcbFgwKBkI8dkw',
   },
+  i18n: {
+    defaultLang: 'en',
+    fallbackLang: 'en',
+    supported: ['en', 'es']
+  }
 };
